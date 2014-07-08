@@ -32,6 +32,8 @@ Things you may want to cover:
 	`rails s`
 
 
-* [Runnig in heroku](http://stark-shore-4041.herokuapp.com/)
+* Example
+
+[http://stark-shore-4041.herokuapp.com/](http://stark-shore-4041.herokuapp.com/)
 
 	
