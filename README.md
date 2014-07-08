@@ -30,3 +30,8 @@ Things you may want to cover:
 
 	`rake spec`
 	`rails s`
+
+
+* [Runnig in heroku](http://stark-shore-4041.herokuapp.com/)
+
+	
