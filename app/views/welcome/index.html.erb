@@ -2,3 +2,8 @@
 <p>
   The time is now: <%= Time.now %>
 </p>
+
+<%= form_for @drug, :url => {:controller => :drugs,:action => :create} do |f| %>
+ 新しい名前：<%= f.text_field :name %> 
+ <%= f.submit('送信') %>
+<% end %>
