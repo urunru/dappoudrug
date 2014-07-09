@@ -1,2 +1,6 @@
 <h1>Drugs#show</h1>
 <p>Find me in app/views/drugs/show.html.erb</p>
+
+<% @drugs.each do |drug| %>
+  <p><%= "#{drug.id}:#{drug.name}" %></p>
+<% end %>
