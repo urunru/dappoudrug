@@ -3,6 +3,8 @@ class DrugsController < ApplicationController
   end
 
   def create
+  	drugs = params[:drug]
+  	render :text => drugs[:name]
   end
 
   def show

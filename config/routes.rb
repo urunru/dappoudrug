@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'drugs/index'
 
-  get 'drugs/create'
+  post 'drugs/create'
 
   get 'drugs/show'
 
