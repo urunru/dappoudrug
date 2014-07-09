@@ -32,7 +32,7 @@ Things you may want to cover:
 	`rails s`
 
 
-* Example
+* DEMO
 
 [http://stark-shore-4041.herokuapp.com/](http://stark-shore-4041.herokuapp.com/)
 

@@ -3,8 +3,12 @@ class DrugsController < ApplicationController
   end
 
   def create
-  	drugs = params[:drug]
-  	render :text => drugs[:name]
+  	@drug = Drug.new(params.require(:drug).permit(:name))
+  	if @drug.save
+  		redirect_to :action => :show
+  	else
+  		redirect_to :back
+  	end
   end
 
   def show
