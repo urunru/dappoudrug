@@ -1,0 +1,73 @@
+共通レイアウトの css を変更
+
+# ページヘッダーを作成
+# --------------
+# Please enter the commit message for your changes. Everything below
+# this paragraph is ignored, and an empty message aborts the commit.
+# Just close the window to accept your message.
+diff --git a/app/assets/stylesheets/layout.css.scss b/app/assets/stylesheets/layout.css.scss
+new file mode 100644
+index 0000000..920eb2a
+--- /dev/null
++++ b/app/assets/stylesheets/layout.css.scss
+@@ -0,0 +1,14 @@
++body {  
++  background-image: image-url("food.png");
++  margin: 100px;
++  color: rgb(85, 85, 85);
++  text-rendering: optimizeLegibility;
++  font-size: 15px;
++  line-height: 1.6;
++} 
++
++div#header{  
++  color: #666;
++  margin: 5px; 
++  padding: 5px;
++}
+\ No newline at end of file
+diff --git a/app/assets/stylesheets/welcome.css.scss b/app/assets/stylesheets/welcome.css.scss
+index 2e74fd3..573bd09 100644
+--- a/app/assets/stylesheets/welcome.css.scss
++++ b/app/assets/stylesheets/welcome.css.scss
+@@ -2,11 +2,3 @@
+ // They will automatically be included in application.css.
+ // You can use Sass (SCSS) here: http://sass-lang.com/
+ 
+-body    {  
+-	background-image: image-url("food.png");
+-	margin: 100px;
+-	color: rgb(85, 85, 85);
+-	text-rendering: optimizeLegibility;
+-	font-size: 15px;
+-	line-height: 1.6;
+-}  
+\ No newline at end of file
+diff --git a/app/views/layouts/_header.html.erb b/app/views/layouts/_header.html.erb
+index 14832cb..3e05aa8 100644
+--- a/app/views/layouts/_header.html.erb
++++ b/app/views/layouts/_header.html.erb
+@@ -1,2 +1,4 @@
+-<%= link_to "ホーム", root_url %>
+-<%= link_to "ランキング", drugs_show_path %>
+\ No newline at end of file
++<div id="header">
++  <%= link_to "ホーム", root_url %>
++  <%= link_to "ランキング", drugs_show_path %>
++</div>
+\ No newline at end of file
+diff --git a/app/views/layouts/application.html.erb b/app/views/layouts/application.html.erb
+index f27b70d..8dfed8f 100644
+--- a/app/views/layouts/application.html.erb
++++ b/app/views/layouts/application.html.erb
+@@ -9,7 +9,9 @@
+ <body>
+ 
+ <%= render "layouts/header" %>
+-<%= yield %>
++<div id="contents">
++  <%= yield %>
++</div>
+ 
+ </body>
+ </html>

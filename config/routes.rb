@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'drugs/index'
-
   post 'drugs/create'
 
   get 'drugs/show'

@@ -1,7 +1,4 @@
 class DrugsController < ApplicationController
-  def index
-  end
-
   def create
   	@drug = Drug.new(params.require(:drug).permit(:name))
   	if @drug.save
@@ -9,9 +6,6 @@ class DrugsController < ApplicationController
   	else
   	  redirect_to :back
   	end
-  end
-
-  def show
   end
 
   def vote
