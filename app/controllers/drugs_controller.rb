@@ -12,6 +12,10 @@ class DrugsController < ApplicationController
   end
 
   def show
-  	@drugs = Drug.all
+  end
+
+  def vote
+    Drug.find(params[:id]).increment!(:score)
+    redirect_to :action => :show
   end
 end

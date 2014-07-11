@@ -1,6 +1,11 @@
 <h1>Drugs#show</h1>
-<p>Find me in app/views/drugs/show.html.erb</p>
 
-<% @drugs.each do |drug| %>
-  <p><%= "#{drug.id}:#{drug.name}" %></p>
-<% end %>
+  <% Drug.all.order("score DESC NULLS LAST").each do |drug| %>
+  <table align=center>
+  	<tr align=center>
+	  <td width="150"><%= drug.score %>票</td>
+      <td width="150"><%= drug.name %></td>
+      <td width="150"><%=  button_to "投票", { :action => "vote", :id => drug.id } %></td>
+    </tr>
+  </table>
+  <% end %>

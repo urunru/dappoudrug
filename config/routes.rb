@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'drugs/show'
 
+  post 'drugs/vote'
+
   get 'index/create'
 
   get 'index/show'

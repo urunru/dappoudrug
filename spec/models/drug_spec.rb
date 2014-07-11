@@ -19,6 +19,4 @@ RSpec.describe Drug, :type => :model do
 		it { expect(drug).to be_valid }
 		it { expect(drug.errors[:name]).to be_empty }
 	end
-
-
 end
