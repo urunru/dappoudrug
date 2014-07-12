@@ -34,6 +34,6 @@ Things you may want to cover:
 
 * DEMO
 
-[http://stark-shore-4041.herokuapp.com/](http://stark-shore-4041.herokuapp.com/)
+[http://dappoudrug.herokuapp.com/](http://dappoudrug.herokuapp.com/)
 
 	
