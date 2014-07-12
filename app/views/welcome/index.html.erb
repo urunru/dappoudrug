@@ -1,9 +1,11 @@
-<h2>ようこそ</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
+<div id="welcome">
+  <h2>ようこそ</h2>
+  <p>
+    The time is now: <%= Time.now %>
+  </p>
 
-<%= form_for @drug, :url => {:controller => :drugs,:action => :create} do |f| %>
- 新しい名前：<%= f.text_field :name %> 
- <%= f.submit('送信') %>
-<% end %>
+  <%= form_for @drug, :url => {:controller => :drugs,:action => :create} do |f| %>
+   新しい名前：<%= f.text_field :name %> 
+   <%= f.submit('送信') %>
+  <% end %>
+</div>
