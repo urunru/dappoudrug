@@ -1,8 +1,6 @@
 class DrugsController < ApplicationController
   def create
   	@drug = Drug.new(params.require(:drug).permit(:name))
-    @drug.score = 0
-    @drug.postdate = Date.today
   	if @drug.save
   	  redirect_to :action => :show
   	else
