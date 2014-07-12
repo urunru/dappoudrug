@@ -6,5 +6,34 @@ div#welcome{
   margin-left:auto;
   margin-right:auto;
   width:30em;
-  border:red;
 }
+
+div#form{
+  margin-left:auto;
+  margin-right:auto;
+  width:27em;
+}
+
+.tb {
+  border:1px solid #bbb;
+  border-radius:10px;
+  height: 32px;
+  width: 230px;
+  font-size: 13px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.btn {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+  border: 1px solid #DDD;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  width: 50px;
+  font-size: 13px;
+  padding: 5px 0;
+}
+

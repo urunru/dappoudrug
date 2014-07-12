@@ -1,11 +1,14 @@
 <div id="welcome">
-  <h2>ようこそ</h2>
+  <h1>危険な脱法ハーブ</h1>
   <p>
-    The time is now: <%= Time.now %>
+    脱法ハーブは危険な薬物です<br/>
+    新しい名前を考えて、みんなに危険だと広めましょう
   </p>
 
-  <%= form_for @drug, :url => {:controller => :drugs,:action => :create} do |f| %>
-   新しい名前：<%= f.text_field :name, :placeholder => '新しい名前' %> 
-   <%= f.submit('送信') %>
-  <% end %>
+  <div id="form">
+    <%= form_for @drug, :url => {:controller => :drugs,:action => :create} do |f| %>
+     <%= f.text_field :name, :class => :tb, :placeholder => '新しい名前' %> 
+     <%= f.submit '送信', :class => :btn %>
+    <% end %>
+  </div>
 </div>
