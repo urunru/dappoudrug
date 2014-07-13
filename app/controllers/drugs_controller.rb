@@ -10,6 +10,6 @@ class DrugsController < ApplicationController
 
   def vote
     Drug.find(params[:id]).increment!(:score)
-    redirect_to :action => :show
+    redirect_to :root, :notice => "投票ありうございます"
   end
 end
