@@ -39,7 +39,6 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.1)
-    google-analytics-rails (0.0.6)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (2.1.1)
@@ -137,7 +136,6 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
-  google-analytics-rails
   jbuilder (~> 2.0)
   jquery-rails
   pg
