@@ -6,7 +6,7 @@
   </p>
 
   <div id="form">
-    <%= form_for @drug, :url => {:controller => :drugs,:action => :create} do |f| %>
+    <%= form_for(@drug) do |f| %>
      <%= f.text_field :name, :class => :tb, :placeholder => '新しい名前' %> 
      <%= f.submit '送信', :class => :btn %>
     <% end %>

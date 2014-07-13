@@ -1,15 +1,10 @@
 Rails.application.routes.draw do
-  post 'drugs/create'
+  post 'drugs', :to => 'drugs#create'
 
   get 'drugs/show'
 
   post 'drugs/vote'
 
-  get 'index/create'
-
-  get 'index/show'
-
-  resources :drugs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
