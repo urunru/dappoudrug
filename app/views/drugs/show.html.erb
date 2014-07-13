@@ -1,11 +1,28 @@
 <h1>危険な名前ランキング</h1>
 
-  <% Drug.all.order("score DESC NULLS LAST").each do |drug| %>
-  <table align=center>
-  	<tr align=center>
-	  <td width="150"><%= drug.score %>票</td>
-      <td width="150"><%= drug.name %></td>
-      <td width="150"><%=  button_to "投票", { :action => "vote", :id => drug.id } %></td>
-    </tr>
-  </table>
-  <% end %>
+  <div id='ranking'>
+    <table cellspacing='0'>
+      <!-- Table Header -->
+      <thead>
+        <tr>
+          <th>票数</th>
+          <th>名前</th>
+          <th>投票ボタン</th>
+        </tr>
+      </thead>
+      <!-- Table Header -->
+
+      <!-- Table Body -->
+      <tbody>
+        <% Drug.all.order("score DESC NULLS LAST").each_with_index do |drug,i| %>
+
+      	<tr <%if i%2==0 %>class="even"<% end %>>
+    	    <td><%= drug.score %>票</td>
+          <td><%= drug.name %></td>
+          <td><%=  button_to "投票", { :action => "vote", :id => drug.id } %></td>
+        </tr>
+        <% end %>
+      </tbody>
+      <!-- Table Body -->
+    </table>
+  </div>
