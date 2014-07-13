@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  post 'drugs', :to => 'drugs#create'
+  post 'drugs' => 'drugs#create'
 
   get 'drugs/show'
 
